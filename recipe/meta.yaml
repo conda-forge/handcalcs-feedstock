@@ -1,5 +1,5 @@
 {% set name = "handcalcs" %}
-{% set version = "1.6.4" %}
+{% set version = "1.6.5" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/handcalcs-{{ version }}.tar.gz
-  sha256: bcbabe72cb401062d3d5564b388f9b94288d1946d30e64e84a177c4a014983e7
+  sha256: 7d47da817e80c5062d0d799fba89939c75602cf3f7fe3a7fbe179ecef6b66b38
 
 build:
   number: 0
