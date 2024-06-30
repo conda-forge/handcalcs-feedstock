@@ -18,19 +18,17 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python >=3.8
     - flit
   run:
     - innerscope >=0.2.0
     - more-itertools >=8.5.0
-    - nbconvert >=6.0.0
     - pyparsing
-    - python >=3.7
+    - python >=3.8
 
 test:
   imports:
     - handcalcs
-    - handcalcs.handcalcs_html
   commands:
     - pip check
   requires:
