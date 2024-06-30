@@ -11,26 +11,24 @@ source:
   sha256: f1bf7e80b0608d62f5257c778259bb7139742083993a967d792ff77a6cfc131a
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python >=3.8
     - flit
   run:
     - innerscope >=0.2.0
     - more-itertools >=8.5.0
-    - nbconvert >=6.0.0
     - pyparsing
-    - python >=3.7
+    - python >=3.8
 
 test:
   imports:
     - handcalcs
-    - handcalcs.handcalcs_html
   commands:
     - pip check
   requires:
