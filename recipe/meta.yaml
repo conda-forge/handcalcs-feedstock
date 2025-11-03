@@ -1,5 +1,5 @@
 {% set name = "handcalcs" %}
-{% set version = "1.9.0" %}
+{% set version = "1.10.0" %}
 
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/handcalcs-{{ version }}.tar.gz
-  sha256: f1bf7e80b0608d62f5257c778259bb7139742083993a967d792ff77a6cfc131a
+  sha256: 6c4dc51c7309cdaee2eddb79efe13f7d6a7555309035fd10fb0c9bd6ffbff2b4
 
 build:
-  number: 2
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -21,8 +21,8 @@ requirements:
     - python {{ python_min }}
     - flit
   run:
-    - innerscope >=0.2.0
-    - more-itertools >=8.5.0
+    - innerscope >=0.7.0
+    - more-itertools
     - pyparsing
     - python >={{ python_min }}
 
