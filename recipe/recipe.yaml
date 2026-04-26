@@ -1,0 +1,52 @@
+schema_version: 1
+
+context:
+  name: handcalcs
+  version: 1.11.0
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/handcalcs-${{ version }}.tar.gz
+  sha256: e7f47c72faee829310dd61de94ad7bb1d20a1003243611a1706b828a826eb28d
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - pip
+    - python ${{ python_min }}.*
+    - flit
+  run:
+    - innerscope >=0.7.0
+    - more-itertools
+    - pyparsing
+    - python >=${{ python_min }}
+
+tests:
+  - python:
+      imports:
+        - handcalcs
+      python_version: ${{ python_min }}.*
+  - requirements:
+      run:
+        - pip
+        - python ${{ python_min }}.*
+    script:
+      - pip check
+
+about:
+  summary: Converts your Python calculation script into beautifully rendered Latex,
+  license: Apache-2.0
+  license_file: LICENSE
+  homepage: https://github.com/connorferster/handcalcs
+
+extra:
+  recipe-maintainers:
+    - connorferster
+    - jan-janssen
