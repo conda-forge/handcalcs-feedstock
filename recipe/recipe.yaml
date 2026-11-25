@@ -27,6 +27,7 @@ requirements:
     - more-itertools
     - pyparsing
     - python >=${{ python_min }}
+    - jinja2
 
 tests:
   - python:
