@@ -28,6 +28,7 @@ requirements:
     - pyparsing
     - python >=${{ python_min }}
     - jinja2
+    - pfst
 
 tests:
   - python:
