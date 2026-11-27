@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: handcalcs
-  version: "2.0.0"
+  version: "2.0.1"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/handcalcs-${{ version }}.tar.gz
-  sha256: 6f189c404c630c4e0117284d6de6ac357c5e2f074d49293c558d99f3dcb3764a
+  sha256: 8423737827e0a0c1a7346bb4efcee1628b6f4431c5b0a96523721b0b473ab7b3
 
 build:
   number: 0
